@@ -1,13 +1,21 @@
 {
+<<<<<<< HEAD
   "name": "kj_utility_tool",
+=======
+  "name": "utility_tool",
+>>>>>>> a9bb8407434a13ba98691d1797129844d08faf87
   "version": "1.0.0",
   "description": "Debugging tool",
   "main": "src/server.js",
   "dependencies": {
+<<<<<<< HEAD
     "colors": "^1.1.2",
     "mocha": "^3.0.2",
     "mocha-sinon": "^1.1.5",
     "sinon": "^1.17.5"
+=======
+    "colors": "^1.1.2"
+>>>>>>> a9bb8407434a13ba98691d1797129844d08faf87
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -16,7 +24,10 @@
     "eslint-plugin-import": "^1.13.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
     "eslint-plugin-react": "^6.1.2",
+<<<<<<< HEAD
     "istanbul": "^0.4.4",
+=======
+>>>>>>> a9bb8407434a13ba98691d1797129844d08faf87
     "mocha": "^3.0.2"
   },
   "scripts": {
