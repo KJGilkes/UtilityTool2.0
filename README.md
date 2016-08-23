@@ -1,5 +1,7 @@
 # UtilityTool2.0
 
+[ ![Codeship Status for KJGilkes/UtilityTool2.0](https://codeship.com/projects/6a360da0-4af8-0134-5887-5a647d62e392/status?branch=master)](https://codeship.com/projects/169804)
+
 # Usage
 This debugging tool displays information about your application.
 
