@@ -5,7 +5,6 @@ exports.debug = (msg, status) => {
   const seperator = '\n=============================\n';
   if (process.env.DEBUG) {
     const coloredmsg = color.green(msg);
-    const warnmsg = color.yellow(msg);
     const errormsg = color.red(msg);
     if (status === undefined) {
       console.log(coloredmsg + seperator);
@@ -25,15 +24,13 @@ exports.debug = (msg, status) => {
 exports.log = (msg, status) => {
   const seperator = '\n=============================\n';
   if (process.env.DEBUG) {
-    const coloredmsg = color.green(msg);
-    const warnmsg = color.yellow(msg);
-    const errormsg = color.red(msg);
+    const coloredMsg = color.green(msg);
     if (status === undefined) {
-      console.log(coloredmsg + seperator);
+      console.log(coloredMsg + seperator);
     } else if (status === 444) {
-      console.log(errormsg + seperator);
+      console.log(coloredMsg + seperator);
     } else {
-      console.log(coloredmsg, status + seperator);
+      console.log(coloredMsg, status + seperator);
     }
   }
 };
@@ -46,15 +43,13 @@ exports.log = (msg, status) => {
 exports.warn = (msg, status) => {
   const seperator = '\n=============================\n';
   if (process.env.DEBUG) {
-    const coloredmsg = color.green(msg);
-    const warnmsg = color.yellow(msg);
-    const errormsg = color.red(msg);
+    const warnMsg = color.yellow(msg);
     if (status === undefined) {
-      console.log(coloredmsg + seperator);
+      console.log(warnMsg + seperator);
     } else if (status === 444) {
-      console.log(errormsg + seperator);
+      console.log(warnMsg + seperator);
     } else {
-      console.log(coloredmsg, status + seperator);
+      console.warn(warnMsg, status + seperator);
     }
   }
 };
@@ -67,15 +62,13 @@ exports.warn = (msg, status) => {
 exports.error = (msg, status) => {
   const seperator = '\n=============================\n';
   if (process.env.DEBUG) {
-    const coloredmsg = color.green(msg);
-    const warnmsg = color.yellow(msg);
-    const errormsg = color.red(msg);
+    const errorMsg = color.red(msg);
     if (status === undefined) {
-      console.log(coloredmsg + seperator);
+      console.log(errorMsg + seperator);
     } else if (status === 444) {
-      console.log(errormsg + seperator);
+      console.log(errorMsg + seperator);
     } else {
-      console.log(coloredmsg, status + seperator);
+      console.error(errorMsg, status + seperator);
     }
   }
 };
