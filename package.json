@@ -1,6 +1,6 @@
 {
   "name": "kj_utility_tool",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Debugging tool",
   "main": "src/server.js",
   "dependencies": {
