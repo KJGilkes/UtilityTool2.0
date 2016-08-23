@@ -8,7 +8,6 @@ To install this tool use the command:
 ```
 npm i --save kj_utility_tool
 ```
-
 To run the application in debug mode you will need to run:
 ```
 DEBUG=true npm start
