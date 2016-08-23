@@ -5,7 +5,8 @@ exports.debug = (msg, status) => {
   const seperator = '\n=============================\n';
   if (process.env.DEBUG) {
     const coloredmsg = color.green(msg);
-    const errormsg = color.yellow(msg);
+    const warnmsg = color.yellow(msg);
+    const errormsg = color.red(msg);
     if (status === undefined) {
       console.log(coloredmsg + seperator);
     } else if (status === 444) {
