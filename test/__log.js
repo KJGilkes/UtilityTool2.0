@@ -32,11 +32,4 @@ describe('Console log', () => {
     expect(logger.callCount).to.equal(1);
     done();
   });
-
-  it('Should be able to append to a file', (done) => {
-      let append = sinon.spy();
-      append(fs.appendFile('logs/output.log', "Test output", () => {}));
-      expect(append.callCount).to.equal(1);
-      done();
-    });
-  });
+});
