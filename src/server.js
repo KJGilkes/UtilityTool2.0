@@ -17,6 +17,13 @@ exports.debug = (msg, status) => {
   }
 };
 
+/**
+* @function log() will output to console.log()
+* @param {String} msg
+* @param {Object} obj
+* @param {Variable} level
+* @return {String} message
+*/
 exports.log = (msg, status) => {
   const seperator = '\n=============================\n';
   if (process.env.DEBUG) {
@@ -33,6 +40,13 @@ exports.log = (msg, status) => {
   }
 };
 
+/**
+* @function warn() will output to console.warn()
+* @param {String} msg
+* @param {Object} obj
+* @param {Variable} level
+* @return {String} message
+*/
 exports.warn = (msg, status) => {
   const seperator = '\n=============================\n';
   if (process.env.DEBUG) {
@@ -49,6 +63,13 @@ exports.warn = (msg, status) => {
   }
 };
 
+/**
+* @function error() will output to console.error()
+* @param {String} msg
+* @param {Object} obj
+* @param {Variable} level
+* @return {String} message
+*/
 exports.error = (msg, status) => {
   const seperator = '\n=============================\n';
   if (process.env.DEBUG) {
