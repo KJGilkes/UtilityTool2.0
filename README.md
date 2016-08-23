@@ -20,9 +20,18 @@ To use this debug tool in the application you must put this line at the top of t
 ```
 const utility = require('kj_utility_tool');
 ```
-After the tool has been included you can then console log any information using this line of code.
-```
+After the tool has been included you can then console log, debug, error, or warn any information using this line of code.
+```javascript
 utility.debug('Message to be displayed.', Status Code);
+```
+```javascript
+utility.log('Message to be displayed.', Status Code);
+```
+```javascript
+utility.error('Message to be displayed.', Status Code);
+```
+```javascript
+utility.warn('Message to be displayed.', Status Code);
 ```
 
 ## Sample
