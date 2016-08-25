@@ -10,7 +10,7 @@ describe('Console log', () => {
     logger(utility.debug('Logging'));
     expect(logger.callCount).to.equal(1);
   });
-
+  // FIXME: remove unnecessary test
   it('Should be able to append to a file', (done) => {
       let append = sinon.spy();
       append(fs.appendFile('logs/output.log', "Test output", () => {}));
