@@ -34,3 +34,10 @@ utility.debug('App route has been hit.', 200);
 App route has been hit. 200
 ===========================
 ```
+
+## Version bumping
+To use the utility tool's version bump it must be used with a task manager.
+```javascript
+utility.bumpit(currentV, tag);
+```
+The method takes in two parameters where currentV is a string of the current semantic version and 3 different tags: MAJOR MINOR PATCH
