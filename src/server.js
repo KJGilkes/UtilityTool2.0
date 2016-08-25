@@ -24,3 +24,45 @@ exports.debug = (msg, status) => {
     }
   }
 };
+
+exports.bumpit = (currentV, tag) => {
+  const tagComp = tag.toUpperCase();
+
+  // Format version string into an array
+  const updateV = currentV.split('.');
+
+  // Make sure version string is only numbers
+  if (currentV.match(/^[a-z]+$/)) {
+    throw error;
+  } else {
+    // Check tag strings for semver versioning Vmajor.minor.patch
+    if (tagComp === 'MAJOR') {
+      // v+MAJOR.0.0
+      updateV[0]++;
+
+      // Reset other semver values to '0'
+      updateV[1] = 0;
+      updateV[2] = 0;
+
+      return updateV.join('.');
+    } else if (tagComp === 'MINOR') {
+      // v0.+MINOR.0
+      updateV[1]++;
+
+      // Reset other semver values to '0'
+      updateV[0] = 0;
+      updateV[2] = 0;
+
+      return updateV.join('.');
+    } else if (tagComp === 'PATCH') {
+      // v0.0.+PATCH
+      updateV[2]++;
+
+      // Reset other semver values to '0'
+      updateV[0] = 0;
+      updateV[1] = 0;
+
+      return updateV.join('.');
+    }
+  }
+};
